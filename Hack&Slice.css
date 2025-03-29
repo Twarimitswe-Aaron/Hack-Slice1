@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --main:#fedddd;
+    --button:#e74242;
+}
+body{
+    font-family: 'poppins';
+}
+
+/* about navigation  links*/
+nav{
+    display: flex;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    position: relative;
+}
+nav .image img{
+    height: 75px;
+    padding: 8px  18px;
+}
+.navigation, .navigation1,.image {
+    margin: auto 16px;
+    display: flex;
+}
+.navigation ul{
+    display: flex;
+    list-style: none;  
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: var(--button);
+    justify-content: center;
+    margin:0 13px ;
+    position: relative;
+    font-weight: 550;
+    
+}
+.navigation ul li a:hover::after{
+    width: 100%;
+}
+
+
+.navigation ul li a::after{
+content: ' ';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0%;
+height: 2px;
+background-color: var(--button);
+display: block;
+transition: width 1s ease;
+}
+
+
+.navigation1 .inputs{
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+/* about input and search */
+.search{
+    margin: auto 1px;
+    
+}
+.search input{
+    width: 230px;
+    height: 40px;
+    border: 1px solid #e7dbdb;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #535252;
+    padding-left: 14px;
+    transition: outline 200ms linear;
+}
+.search input:focus{
+    outline:4px solid #c3dbff;
+}
+.search input::placeholder{
+    font-size: 16px;
+    
+}
+/* button */
+.search button{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border:1.5px solid var(--button);
+    color: var(--button);
+    border-radius: 6px;
+    font-weight: 550;
+    margin-left: 4px;
+    background: #fff;
+    transition: color 100ms linear;
+    transition: background-color 100ms linear;
+    
+}
+.search button:hover{
+    background-color: var(--button);
+    color: #fff;
+}
+
+.dropDown{
+    width: 150px;
+    height: 40px;
+    border: 1px solid #e7dbdb;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #535252;
+    padding-left: 14px;
+    transition: outline 200ms;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.dropDown:focus{
+    outline:4px solid #c3dbff;
+}
+
+/* cart ones */
+
+.cart{
+justify-content: center;
+display: flex;
+align-items: center;
+position:relative;
+
+}
+.cart a{
+    color: rgb(40, 96, 252);
+    margin-left: 16px;
+}
+.cart a .power{
+    position: absolute;
+    top: 5px;
+    right: 110px;
+    background-color: #dc3545;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 3px;
+    font-size: 10px;
+    z-index: 1;
+    height: 16px;
+    width: 15px;
+   
+
+}
+
+/* Login button */
+.cart button{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--button);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 100ms ;
+    font-weight: 550;
+}
+.cart button:hover{
+    background-color: #fff;
+    color: #dc3545;
+    border:1px solid #dc3545;
+}
+.findstore{
+    display: flex;
+    margin-left:110px ;
+}
+
+/* first failure of responsiveness */
+/* @media  screen and(max-width:1264px) {
+    .navigation1{
+        flex-direction: column;
+        display: flex;
+    }
+    
+} */
+
+/* pizza section */
+section{
+    display: flex;
+    
+}
+
+section .left{
+    width: 50%;
+    float: left;
+    position: relative;
+}
+section .right-image{
+    width: 50%;
+    height: 39rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background-repeat: no-repeat  ;
+    background-position: 50% 20%;
+    background-size: 90%;
+    animation: slidePizza 20s infinite;
+}
+
+@keyframes slidePizza {
+    0%{
+        background-image: url("./Images/big\ pizza2.png");
+    }
+    25%{
+        background-image: url("./Images/big\ pizza1.png");
+    }
+    50%{
+        background-image: url("./Images/big\ pizza2.png");
+    }
+    75%{
+        background-image: url("./Images/big\ pizza1.png");
+    }
+    100%{
+        background-image: url("./Images/big pizza2.png");
+    }
+    
+}
+
+section .right-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-image: inherit; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30rem; 
+    animation: rotate 100s linear infinite; 
+    
+  }
+  
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+      
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* left text */
+
+section .left .text{
+    padding: 80px 0 30px 80px;
+
+}
+section .left .text h4{
+    font-size: 1rem;
+    color: var(--button);
+}
+section .left .text .text-container{
+    font-size: 1.5rem;
+    font-family: "poppins";
+    position: relative;
+    width: 100%;
+    height: 4rem;
+}
+
+.text-animation{
+    position: absolute;
+    width: 100%;
+    transform: translateY(20px);
+    animation: textCyle 20s infinite ease-in-out;
+    opacity: 0;
+
+}
+.text-animation:nth-child(1){animation-delay: 0s;}
+.text-animation:nth-child(2){animation-delay: 5s;}
+.text-animation:nth-child(3){animation-delay: 10s;}
+.text-animation:nth-child(4){animation-delay: 15s;}
+
+@keyframes textCyle {
+    0%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    5%{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+    20%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+}
+
+section .left .text p{
+    line-height: 1.5;
+    color: #A48888;
+    width: 87%;
+    font-size: 1.1rem;
+}
+section .left .images{
+    box-sizing: border-box;
+    display: flex;
+    width: 50%;
+    padding-left:70px;
+    align-items: start;
+    position: relative;
+
+}
+section .left .images img{
+    width: 7rem; 
+    overflow: hidden;
+}
+section .left .images .image:after{
+  content: ' ';
+  position: absolute;
+  bottom: -0.51rem; 
+  background-color: #D13E3E;
+  box-shadow: 1px 1px 2px var(--button);
+  height: 4px;
+  width: 0%;
+  opacity: 0;
+  display: block;
+  border-radius: 2rem;
+  animation: underline 20s infinite;
+  transform-origin: right;
+}
+section .left .images .a1:after{animation-delay: 0s;}
+section .left .images .a2:after{animation-delay: 5s;}
+section .left .images .a3:after{animation-delay: 10s;}
+section .left .images .a4:after{animation-delay: 15s;}
+
+@keyframes underline {
+    0%{
+        opacity: 0;
+        width: 0%;
+    }
+    10%{
+        opacity: 1;
+        width: 32%;
+    }
+    20%{
+        opacity: 1;
+        width: 32%;
+    }
+    30%{
+        opacity: 0;
+        width: 0%;
+    }
+    100%{
+        opacity: 0;
+        width: 0%;
+    } 
+    
+}
+
+/* Buttons about offers */
+section .buttons{
+    display: flex;
+    padding: 4rem 0 4rem 5rem;
+    justify-content: space-between;
+    width: 90%;
+}
+section .buttons p a{
+    text-decoration: none;
+    color: var(--button);
+    font-family: "poppins";
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+/* hover of text */
+
+section .buttons p a:hover{
+    text-decoration: underline;
+}
+
+section .buttons a button{
+    width: 100px;
+    height: 40px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--button);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 100ms ;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+section .buttons a button:hover{
+    background-color: #fff;
+    color: #dc3545;
+    border:1px solid #dc3545;
+}
+
+
+

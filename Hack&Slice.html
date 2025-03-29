@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav>
-        <div class="image"><img src="./Images/logo.png" alt="pizza logo"></div>
+        <div class="image"><a href="#"><img src="./Images/logo.png" alt="pizza logo"></a></div>
         <div class="navigation">
             <ul>
                 <li><a href="#">HOME</a></li>
@@ -21,20 +21,57 @@
             </ul>
 
         </div>
+       <div class="navigation1">
         <div class="inputs">
-            <input type="text" placeholder="Search Menu...">
+           <form action="" class="search">
+            <input type="text" placeholder="Search menu...">
             <button type="submit"><i class="fas fa-search"></i></button>
-            <select name="zones" id="zones">
-                <option value="Kigali">Kigali</option>
-                <option value="Musanze">Musanze</option>
-                <option value="Nyabihu">Nyabihu</option>
-                <option value="Goma">Goma</option>
-            </select>
+           </form>
+       <div class="findstore">
+        <select name="zones" id="zones" class="dropDown">
+            <option value="Kigali">Find a store</option>
+            <option value="Kigali">Kigali</option>
+            <option value="Musanze">Musanze</option>
+            <option value="Nyabihu">Nyabihu</option>
+            <option value="Goma">Goma</option>
+        </select>
+        <div class="cart">
             <a href="#"><i class="fa fa-shopping-cart fa-lg"><span class="power">2</span></i></a>
-            <a href="#">SIGN IN</a>
+           <a href="#"><button>SIGN IN</button></a>
         </div>
-
+       </div>
+        </div>
+       </div>
     </nav>
+    <!-- body section -->
+     <section>
+        <div class="left">
+            <div class="text">
+                <h4>Today's Special Pizza</h4>
+                <div class="text-container">
+                    <h1 class="text-animation">Meat Lovers - Chicken</h1>
+                    <h1 class="text-animation">Hot Garlic Prawns</h1>
+                    <h1 class="text-animation">Veggie Suprem</h1>
+                    <h1 class="text-animation">Super Suprem</h1>
+                </div>
+                <p>Rich tomato sauce base topped with cream cheese,onions green chill...</p>
+            </div>
+            <div class="images">
+                <div class="image a1"><img src="./Images/pizza4.png" alt="pizza1" ></div>
+                <div class="image a2"><img src="./Images/pizza2.png" alt="pizza1" ></div>
+                <div class="image a3"><img src="./Images/pizza3.png" alt="pizza1" ></div>
+                <div class="image a4"><img src="./Images/pizza4.png" alt="pizza1" ></div>
+                
+            </div>
+            <div class="buttons">
+                <p><a href="#">Customize Order</a></p>
+                <a href="#"><button>1,260 Frw</button></a>
+            </div>
+        </div>
+        <div class="right-image">
+            <!-- i will use background -->
+        </div>
+     </section>
 
 </body>
 </html>
